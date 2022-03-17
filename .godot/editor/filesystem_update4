@@ -1,0 +1,5 @@
+res://scenes/character.tscn
+res://scenes/enemy.tscn
+res://scenes/entity.tscn
+res://scenes/world.tscn
+res://scripts/goap/actions/wander_action.gd

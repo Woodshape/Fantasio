@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://48jib7j7g8le"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxtbc"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_a77ro"]
+size = Vector2(16, 16)
+
+[node name="Entity" type="CharacterBody2D" groups=["entity"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( "RectangleShape2D_sxtbc" )
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = SubResource( "ImageTexture_a77ro" )
+region_rect = Rect2(-1136.25, -340.844, 0, 0)
+
+[node name="WanderTimer" type="Timer" parent="."]
+autostart = true

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://de1r2k7eqqpob"]
+
+[ext_resource type="PackedScene" uid="uid://48jib7j7g8le" path="res://scenes/entity.tscn" id="1_362yw"]
+[ext_resource type="Script" path="res://scripts/character.gd" id="2_bnrm1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xc0bh"]
+load_path = "res://.godot/imported/satyr_.png-c0b84af33d89d44b960398cc44073bbe.ctex"
+
+[node name="Character" groups=["character"] instance=ExtResource( "1_362yw" )]
+script = ExtResource( "2_bnrm1" )
+
+[node name="Body" parent="." index="1"]
+texture = SubResource( "CompressedTexture2D_xc0bh" )
+hframes = 8
+vframes = 6
+
+[connection signal="timeout" from="WanderTimer" to="." method="_on_wander_timer_timeout"]
